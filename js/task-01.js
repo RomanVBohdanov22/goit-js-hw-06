@@ -19,6 +19,16 @@ Category: Technologies
 Elements: 5
 */
 
+console.log('dir');
+console.dir(document);
+
+const navEl = document.querySelector('li');
+console.log('navEl', navEl);
+const navEl2 = document.querySelectorAll('li');
+console.log('navEl2', navEl2);
+
+const navEl3 = navEl.querySelectorAll('li');
+console.log('navEl3', navEl3);
 console.log('');
 
 console.log(document);
@@ -35,6 +45,8 @@ console.log(firstListItem);
 const listItems = list.children;
 console.log(listItems);
 
+
+  
 /*
 console.log('');
 
