@@ -30,6 +30,7 @@ console.log('navEl2', navEl2);
 const navEl3 = navEl.querySelectorAll('li');
 console.log('navEl3', navEl3);
 console.log('');
+//const itemSelect = navEl3.item;
 
 console.log(document);
 
