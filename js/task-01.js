@@ -32,19 +32,30 @@ console.log('navEl3', navEl3);
 console.log('');
 //const itemSelect = navEl3.item;
 
+console.log('conspect nodes1');
+console.log('console.log(document)');
 console.log(document);
+console.log('');
 
+console.log('const body = document.body');
 const body = document.body;
 console.log(body);
+console.log('');
 
+console.log('const list = body.firstElementChild;');
 const list = body.firstElementChild;
 console.log(list);
+console.log('');
 
+console.log('const firstListItem = list.firstElementChild');
 const firstListItem = list.firstElementChild;
 console.log(firstListItem);
+console.log('');
 
+console.log('const listItems = list.children');
 const listItems = list.children;
 console.log(listItems);
+console.log('');
 
 
   
