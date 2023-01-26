@@ -78,4 +78,8 @@ console.log(menuItemsByClass);
 
 const firstMenuItem = document.querySelector(".menu-item");
 firstMenuItem.style.color = 'tomato';
-console.log(firstMenuItem); */
+console.log(firstMenuItem);*/
+
+
+
+
