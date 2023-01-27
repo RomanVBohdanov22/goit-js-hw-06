@@ -59,15 +59,16 @@ console.log('');
 
 const minuteToClock = function (minutes) {
 
-    //(minutes / 60).toString();//.padStart(2, 0);
-    let minutES = (minutes % 60).toString();//.padStart(2, 0);
-    let hours = ((minutes - minutES)/60).toString();
-    let timeString = `hours:minutes :: ${hours}:${minutES}`;//`minutes ${minutes}`;
+    let minutES = (minutes % 60).toString().padStart(2, 0);
+    let hours = ((minutes - minutES)/60).toString().padStart(2, 0);
+    let timeString = `hours:minutes :: ${hours}:${minutES}`;
 
     return timeString;
  }
 
 console.log(minuteToClock(78));
+console.log(minuteToClock(450));
+console.log(minuteToClock(1441));
 
   
 /*
