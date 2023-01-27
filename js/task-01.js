@@ -19,9 +19,6 @@ Category: Technologies
 Elements: 5
 */
 
-console.log('dir');
-console.dir(document);
-
 const navEl = document.querySelector('li');
 console.log('navEl', navEl);
 const navEl2 = document.querySelectorAll('li');
@@ -30,8 +27,11 @@ console.log('navEl2', navEl2);
 const navEl3 = navEl.querySelectorAll('li');
 console.log('navEl3', navEl3);
 console.log('');
-//const itemSelect = navEl3.item;
 
+//console.log('dir');
+//console.dir(document);
+//const itemSelect = navEl3.item;
+/*
 console.log('conspect nodes1');
 console.log('console.log(document)');
 console.log(document);
@@ -55,7 +55,7 @@ console.log('');
 console.log('const listItems = list.children');
 const listItems = list.children;
 console.log(listItems);
-console.log('');
+console.log('');*/
 
 const minuteToClock = function (minutes) {
 
