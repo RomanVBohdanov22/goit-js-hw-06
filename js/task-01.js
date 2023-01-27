@@ -19,14 +19,20 @@ Category: Technologies
 Elements: 5
 */
 
-const navEl = document.querySelector('li');
+//const navEl = document.querySelector('li');
+//console.log('navEl', navEl);
+const navEl = document.querySelector('ul#categories');
 console.log('navEl', navEl);
+const navElCat = navEl.querySelectorAll('li.item');
+console.log('navElCat', navElCat);
+console.log('Number of categories: ', navElCat.length);
 const navEl2 = document.querySelectorAll('li');
 console.log('navEl2', navEl2);
-
-const navEl3 = navEl.querySelectorAll('li');
-console.log('navEl3', navEl3);
 console.log('');
+
+//const navEl3 = navEl.querySelectorAll('li');
+//console.log('navEl3', navEl3);
+//console.log('');
 
 //console.log('dir');
 //console.dir(document);
