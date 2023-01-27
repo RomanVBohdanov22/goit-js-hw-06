@@ -19,16 +19,19 @@ Category: Technologies
 Elements: 5
 */
 
-//const navEl = document.querySelector('li');
-//console.log('navEl', navEl);
 const navEl = document.querySelector('ul#categories');
-console.log('navEl', navEl);
+//console.log('navEl', navEl);
 const navElCat = navEl.querySelectorAll('li.item');
-console.log('navElCat', navElCat);
+//console.log('navElCat', navElCat);
 console.log('Number of categories: ', navElCat.length);
-const navEl2 = document.querySelectorAll('li');
-console.log('navEl2', navEl2);
 console.log('');
+
+for (const itemEl of navElCat)
+{
+    console.log('Category: ', itemEl.querySelector('h2').textContent);
+    console.log('Elements: ', itemEl.querySelectorAll('li').length);
+    console.log('');
+}    
 
 //const navEl3 = navEl.querySelectorAll('li');
 //console.log('navEl3', navEl3);
@@ -63,6 +66,10 @@ const listItems = list.children;
 console.log(listItems);
 console.log('');*/
 
+
+
+/*
+
 const minuteToClock = function (minutes) {
 
     let minutES = (minutes % 60).toString().padStart(2, 0);
@@ -75,7 +82,7 @@ const minuteToClock = function (minutes) {
 console.log(minuteToClock(78));
 console.log(minuteToClock(450));
 console.log(minuteToClock(1441));
-
+*/
   
 /*
 console.log('');
