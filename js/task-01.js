@@ -33,6 +33,8 @@ for (const itemEl of navElCat)
     console.log('');
 }    
 
+
+
 //const navEl3 = navEl.querySelectorAll('li');
 //console.log('navEl3', navEl3);
 //console.log('');
