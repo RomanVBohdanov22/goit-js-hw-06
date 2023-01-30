@@ -24,7 +24,7 @@ const ingredients = [
     Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
 */
 
-const ingredients = [
+const ingredientsMas = [
   'Potatoes',
   'Mushrooms',
   'Garlic',
@@ -34,3 +34,17 @@ const ingredients = [
 ];
 
 
+const proceedMarcup = ingredientsMas.map(ingredient => { 
+  const li = document.createElement('li');
+  li.textContent = ingredient;
+  li.classList.add('item');
+  return li;
+});
+
+const ingredients = document.querySelector('#ingredients');
+
+ingredients.append(...proceedMarcup);
+
+/*for (const item of ingredients) { 
+  console.log(item);
+}*/
