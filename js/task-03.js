@@ -42,18 +42,31 @@ const images = [
   },
 ];
 
-
+//imageItem
 
 const procGallery = images.map(
-  imageItem => { 
+  ({url, alt}) => { 
     const li = document.createElement('li');
-    li.innerHTML = `<img src="${imageItem.url}" alt="${imageItem.alt}">`;
+    //li.innerHTML = `<img src="${url}" alt="${alt}">`;
+    li.insertAdjacentHTML("afterbegin", `<img src="${url}" alt="${alt}">`);
     return li;
   }
 );
 
+console.log(procGallery);
+console.log('');
+
 const gallery = document.querySelector('.gallery');
 
 gallery.append(...procGallery);
+
+console.log(gallery);
+console.log('');
+
+console.log(gallery.innerHTML);
+
+console.log('');
+
+//console.log(document.querySelector('body').innerHTML);
 
 //console.log(...images);
