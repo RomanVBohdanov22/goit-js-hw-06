@@ -28,3 +28,16 @@
   border-color: #f44336;
 }
 */
+
+const inputLnk = document.querySelector('#validation-input');
+inputLnk.addEventListener('blur', checkOutput);
+
+const dataLength = inputLnk.getAttribute('data-length');
+console.log(dataLength);
+
+function checkOutput() { 
+    const operativeValue = [...inputLnk.value].length;
+    if (operativeValue != dataLength) {
+        console.log(operativeValue, inputLnk.value);
+    }
+}

@@ -23,3 +23,8 @@
     властивість elements.
     Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
 */
+/*
+ const {
+    elements: { username, password }
+  } = event.currentTarget;
+*/
