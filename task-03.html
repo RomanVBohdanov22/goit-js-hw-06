@@ -18,18 +18,24 @@
       .gallery {
         font-weight: 500;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        gap: 16px;
+        max-width: 100%;
         /*margin: auto;
         padding: 0;*/
         list-style-type: none;
+        justify-content: left;
       }
 
       .gallery:not(:last-child) {
-        margin-bottom: 8px;
+        margin-bottom: 16px;
       }
       .gallery img {
         display: box;
-        width: 400px;
+        max-width: 100%;
+        /*width: auto;*/
         height: auto;
       }
     </style>
