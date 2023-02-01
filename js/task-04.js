@@ -14,3 +14,22 @@
     Оновлюй інтерфейс новим значенням змінної counterValue.
 */
 
+const idLnk = document.querySelector('#value');
+const buttonDecrement = document.querySelector('button[data-action="decrement"]');
+const buttonIncrement = document.querySelector('button[data-action="increment"]');
+
+buttonDecrement.addEventListener('click', decreaseValue);
+buttonIncrement.addEventListener('click', increaseValue);
+
+let operatValue = idLnk.textContent*1;
+
+function decreaseValue() { 
+    operatValue -= 1;
+    idLnk.textContent = operatValue;
+}
+function increaseValue() {
+    operatValue += 1;
+    idLnk.textContent = operatValue;
+}
+
+console.log(operatValue);
