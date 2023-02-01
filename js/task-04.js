@@ -21,7 +21,8 @@ const buttonIncrement = document.querySelector('button[data-action="increment"]'
 buttonDecrement.addEventListener('click', decreaseValue);
 buttonIncrement.addEventListener('click', increaseValue);
 
-let operatValue = idLnk.textContent*1;
+//let operatValue = -(-(idLnk.textContent));
+let operatValue = Number(idLnk.textContent);
 
 function decreaseValue() { 
     operatValue -= 1;
