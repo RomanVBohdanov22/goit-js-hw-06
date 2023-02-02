@@ -90,3 +90,37 @@ inputFieldsLnk[1].addEventListener('blur', ifPassFinished);
 function ifPassFinished() { 
 
 }
+
+/*
+
+
+const form = document.querySelector(".form");
+
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const {
+    elements: { login, password }
+  } = event.currentTarget;
+
+  if (login.value === "" || password.value === "") {
+    return console.log("Please fill in all the fields!");
+  }
+
+  console.log(`Login: ${login.value}, Password: ${password.value}`);
+  event.currentTarget.reset();
+}
+
+/*
+
+
+<form class="form" autocomplete="off">
+  <input type="text" name="login" placeholder="Login">
+  <input type="password" name="password" placeholder="Password">
+  <button class="btn" type="submit">Register</button>
+</form>
+
+
+/
+*/
