@@ -36,7 +36,9 @@ const dataLength = inputLnk.getAttribute('data-length');
 console.log(dataLength);
 
 function checkOutput() { 
-    const operativeValue = [...inputLnk.value].length;    
+    let currentValue = inputLnk.value.trim();
+    inputLnk.value = currentValue;
+    const operativeValue = [...currentValue].length;    
     if (operativeValue != dataLength) {
         //console.log(operativeValue, inputLnk.value);
         inputLnk.classList.remove("valid");

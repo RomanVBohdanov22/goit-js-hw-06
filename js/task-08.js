@@ -28,3 +28,65 @@
     elements: { username, password }
   } = event.currentTarget;
 */
+/*
+<form class="register-form" autocomplete="off">
+  <input type="text" name="username" placeholder="Username" />
+  <input type="password" name="password" placeholder="Password" />
+  <button type="submit">Register</button>
+</form>
+*/
+/*
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form input {
+  margin-bottom: 16px;
+  padding: 8px 12px;
+}
+
+.register-form button {
+  padding: 12px;
+}
+
+
+*/
+/*
+const form = document.querySelector(".register-form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const {
+    elements: { username, password }
+  } = event.currentTarget;
+  console.log(username.value, password.value);
+});
+*/
+
+const loginFormLnk = document.querySelector('.login-form');
+console.log(loginFormLnk);
+//console.log(loginFormLnk.name);
+//console.log(loginFormLnk.querySelectorAll('input'));
+
+const inputFieldsLnk = loginFormLnk.querySelectorAll('input');
+const submitButtonLnk = loginFormLnk.querySelector('button');
+
+inputFieldsLnk[0].addEventListener('blur', ifNameFinished);
+
+function ifNameFinished() { 
+
+}
+
+inputFieldsLnk[1].addEventListener('blur', ifPassFinished);
+
+function ifPassFinished() { 
+
+}

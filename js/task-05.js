@@ -26,5 +26,5 @@ function changeOutput() {
         nameOutputLnk.textContent = valueDefault;
         return;
     };
-    nameOutputLnk.textContent = nameInputLnk.value;
+    nameOutputLnk.textContent = nameInputLnk.value.trim();
 }

@@ -15,13 +15,13 @@ const textSpanLnk = document.querySelector("#text");
 
 fontSizeControlLnk.addEventListener('input', changeSize);
 
-const defaultVal = fontSizeControlLnk.value;
-console.log(defaultVal);
-console.log('');
+//const defaultVal = fontSizeControlLnk.value;
+//console.log(defaultVal);
+//console.log('');
 
 function changeSize()
 {
     let readValue = fontSizeControlLnk.value;
-    console.log(readValue);
+    //console.log(readValue);
     textSpanLnk.style.fontSize = `${readValue}px`;
 }
