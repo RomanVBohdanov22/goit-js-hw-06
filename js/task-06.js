@@ -36,8 +36,15 @@ const dataLength = inputLnk.getAttribute('data-length');
 console.log(dataLength);
 
 function checkOutput() { 
-    const operativeValue = [...inputLnk.value].length;
+    const operativeValue = [...inputLnk.value].length;    
     if (operativeValue != dataLength) {
-        console.log(operativeValue, inputLnk.value);
+        //console.log(operativeValue, inputLnk.value);
+        inputLnk.classList.remove("valid");
+        inputLnk.classList.add("invalid");
+    }
+    //
+    else {
+        inputLnk.classList.remove("invalid");
+        inputLnk.classList.add("valid");
     }
 }
