@@ -23,6 +23,51 @@
     властивість elements.
     Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
 */
+
+const loginFormLnk = document.querySelector('.login-form');
+console.log(loginFormLnk);
+let toData = {};
+loginFormLnk.addEventListener("submit", smartSubmit);
+
+function smartSubmit(event) { 
+    event.preventDefault();
+    const {
+    elements: { email, password } // login
+    } = event.currentTarget;
+    if (email.value === "" || password.value === "") {
+        return alert("Please fill in all the fields!");//console.log("Please fill in all the fields!");
+  }
+
+    //const 
+    toData = { Email: email.value, Password: password.value };
+    console.log(`Email: ${email.value}, Password: ${password.value}`);
+
+    console.log(toData.Email, toData.Password);
+    alert(toData.Email, toData.Password);
+
+    event.currentTarget.reset();
+
+    return toData;
+}
+//alert(toData.Email, toData.Password);
+
+/*
+const inputFieldsLnk = loginFormLnk.querySelectorAll('input');
+const submitButtonLnk = loginFormLnk.querySelector('button');
+
+inputFieldsLnk[0].addEventListener('blur', ifNameFinished);
+
+function ifNameFinished() { 
+
+}
+
+inputFieldsLnk[1].addEventListener('blur', ifPassFinished);
+
+function ifPassFinished() { 
+
+}*/
+
+
 /*
  const {
     elements: { username, password }
@@ -71,26 +116,6 @@ form.addEventListener("submit", (event) => {
 });
 */
 
-const loginFormLnk = document.querySelector('.login-form');
-console.log(loginFormLnk);
-//console.log(loginFormLnk.name);
-//console.log(loginFormLnk.querySelectorAll('input'));
-
-const inputFieldsLnk = loginFormLnk.querySelectorAll('input');
-const submitButtonLnk = loginFormLnk.querySelector('button');
-
-inputFieldsLnk[0].addEventListener('blur', ifNameFinished);
-
-function ifNameFinished() { 
-
-}
-
-inputFieldsLnk[1].addEventListener('blur', ifPassFinished);
-
-function ifPassFinished() { 
-
-}
-
 /*
 
 
@@ -113,14 +138,9 @@ function handleSubmit(event) {
 }
 
 /*
-
-
 <form class="form" autocomplete="off">
   <input type="text" name="login" placeholder="Login">
   <input type="password" name="password" placeholder="Password">
   <button class="btn" type="submit">Register</button>
 </form>
-
-
-/
 */

@@ -20,3 +20,18 @@ function getRandomHexColor() {
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
+const bodyLnk = document.querySelector('body');
+const colorWidgetLnk = document.querySelector('.widget');
+
+const colorSpanDisplayLnk = colorWidgetLnk.querySelector('span.color');
+
+const colorChangeButtonLnk = colorWidgetLnk.querySelector('button.change-color');
+
+colorChangeButtonLnk.addEventListener('click', operateWidgetColor);
+
+function operateWidgetColor() { 
+  let tmpColor = getRandomHexColor();
+  colorSpanDisplayLnk.textContent = tmpColor;
+  bodyLnk.style.backgroundColor = tmpColor;
+}

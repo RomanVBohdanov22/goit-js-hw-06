@@ -41,12 +41,14 @@ function checkOutput() {
     const operativeValue = [...currentValue].length;    
     if (operativeValue != dataLength) {
         //console.log(operativeValue, inputLnk.value);
+        //if (inputLnk.classList.contains("valid")) {}
         inputLnk.classList.remove("valid");
         inputLnk.classList.add("invalid");
     }
     //
     else {
-        inputLnk.classList.remove("invalid");
-        inputLnk.classList.add("valid");
+        //if (inputLnk.classList.contains("invalid")) {}
+            inputLnk.classList.remove("invalid");
+            inputLnk.classList.add("valid");        
     }
 }
