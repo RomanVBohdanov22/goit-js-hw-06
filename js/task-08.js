@@ -25,122 +25,54 @@
 */
 
 const loginFormLnk = document.querySelector('.login-form');
-console.log(loginFormLnk);
-let toData = {};
-loginFormLnk.addEventListener("submit", smartSubmit);
-
-function smartSubmit(event) { 
-    event.preventDefault();
+/*
+const mangoUser = {
+  mangoEmail: '',
+  mangoLogin: '',
+  mangoReturnFields() {
+    console.log(this.mangoEmail, this.mangoLogin);
+    return { mangoEmail, mangoLogin };
+  },
+  mangoListener(event) {
     const {
-    elements: { email, password } // login
+      elements: { email, password },
     } = event.currentTarget;
-    if (email.value === "" || password.value === "") {
-        return alert("Please fill in all the fields!");//console.log("Please fill in all the fields!");
-  }
+    if (email.value === '' || password.value === '') {
+      return alert('Please fill in all the fields!');
+    }
+      this.mangoEmail = email.value;
+      this.mangoLogin = password.value;
+        console.log(`Email: ${email.value}, Password: ${password.value}`);
+        event.currentTarget.reset();
+  },
+};
 
-    //const 
-    toData = { Email: email.value, Password: password.value };
-    console.log(`Email: ${email.value}, Password: ${password.value}`);
+loginFormLnk.addEventListener('submit', mangoUser.mangoListener.bind(mangoUser));
 
-    console.log(toData.Email, toData.Password);
-    alert(toData.Email, toData.Password);
-
-    event.currentTarget.reset();
-
-    return toData;
-}
-//alert(toData.Email, toData.Password);
-
-/*
-const inputFieldsLnk = loginFormLnk.querySelectorAll('input');
-const submitButtonLnk = loginFormLnk.querySelector('button');
-
-inputFieldsLnk[0].addEventListener('blur', ifNameFinished);
-
-function ifNameFinished() { 
-
-}
-
-inputFieldsLnk[1].addEventListener('blur', ifPassFinished);
-
-function ifPassFinished() { 
-
-}*/
+mangoUser.mangoReturnFields.bind(mangoUser);*/
 
 
-/*
- const {
-    elements: { username, password }
-  } = event.currentTarget;
-*/
-/*
-<form class="register-form" autocomplete="off">
-  <input type="text" name="username" placeholder="Username" />
-  <input type="password" name="password" placeholder="Password" />
-  <button type="submit">Register</button>
-</form>
-*/
-/*
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.register-form {
-  display: flex;
-  flex-direction: column;
-}
+let toData = {};
+loginFormLnk.addEventListener('submit', smartSubmit);
 
-.register-form input {
-  margin-bottom: 16px;
-  padding: 8px 12px;
-}
-
-.register-form button {
-  padding: 12px;
-}
-
-
-*/
-/*
-const form = document.querySelector(".register-form");
-
-form.addEventListener("submit", (event) => {
+function smartSubmit(event) {
   event.preventDefault();
   const {
-    elements: { username, password }
+    elements: { email, password },
   } = event.currentTarget;
-  console.log(username.value, password.value);
-});
-*/
-
-/*
-
-
-const form = document.querySelector(".form");
-
-form.addEventListener("submit", handleSubmit);
-
-function handleSubmit(event) {
-  event.preventDefault();
-  const {
-    elements: { login, password }
-  } = event.currentTarget;
-
-  if (login.value === "" || password.value === "") {
-    return console.log("Please fill in all the fields!");
+  if (email.value === '' || password.value === '') {
+    return alert('Please fill in all the fields!');
   }
 
-  console.log(`Login: ${login.value}, Password: ${password.value}`);
+  toData.Email = email.value;
+  toData.Password = password.value;
+
+  console.log(`Email: ${email.value}, Password: ${password.value}`);
+
+  console.log(toData.Email, toData.Password);
+
   event.currentTarget.reset();
-}
 
-/*
-<form class="form" autocomplete="off">
-  <input type="text" name="login" placeholder="Login">
-  <input type="password" name="password" placeholder="Password">
-  <button class="btn" type="submit">Register</button>
-</form>
-*/
+  //return alert({ ...toData }.Email, {...toData}.Password);
+} 
