@@ -29,8 +29,38 @@ function getRandomHexColor() {
 
 Створи функцію destroyBoxes(), яка очищає вміст div#boxes, у такий спосіб видаляючи всі створені елементи.
 */
+
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
 }
 
+const controlsLnk = document.querySelector('#controls');
+const buttonCreateLnk = controlsLnk.querySelector('button[data-create]');
+const buttonDestroyLnk = controlsLnk.querySelector('button[data-destroy]');
+const inputLnk = controlsLnk.querySelector('input');
 
+const boxesLnk = document.querySelector('#boxes');
+
+function inputReaderBoxCreator() { 
+  let boxesMarkupArr = new Array(Number(inputLnk.value)).fill("");
+  
+  boxesMarkupArr = boxesMarkupArr.reduce((resultString, el, index) =>
+  {
+    let tmpVal = 30 + index * 10;
+    let randomBackgroundColor = getRandomHexColor();
+    let markupString = `<div style="width: ${tmpVal}px; height: ${tmpVal}px; 
+    background-color: ${randomBackgroundColor}">
+        </div>`;
+    console.log(`Number of boxes = ${el.toString()}`);
+    return (resultString += markupString);      
+    }
+    , ``);
+  boxesLnk.insertAdjacentHTML("beforeend", boxesMarkupArr);
+}
+function removeBoxes() { 
+  boxesLnk.innerHTML = "";
+  inputLnk.value = "";
+}
+
+buttonCreateLnk.addEventListener("click", inputReaderBoxCreator);
+buttonDestroyLnk.addEventListener("click", removeBoxes);

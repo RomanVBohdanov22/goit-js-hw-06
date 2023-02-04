@@ -53,7 +53,6 @@ mangoUser.mangoReturnFields.bind(mangoUser);*/
 
 let toData = {email: "", password: ""};
 const loginFormLnk = document.querySelector('.login-form');
-// function smartSubmit(event)
 
 const  smartSubmit = (event) => {
   event.preventDefault();
@@ -66,15 +65,27 @@ const  smartSubmit = (event) => {
 
   toData.email = email.value;
   toData.password = password.value; 
-
   console.log(`Email: ${email.value}, Password: ${password.value}`);
-  console.log(toData);
-  console.log(toData.email, toData.password); //це видно лише всередині каллбек - функції!
-
-  event.currentTarget.reset();
-
-  //return alert(toData.email + " " + toData.password);
+  //console.log(toData);
+  //console.log(toData.email, toData.password); //це видно лише всередині каллбек - функції!
+  operatorToData(toData.email, toData.password);
+  event.currentTarget.reset(toData.email, toData.password);  
 } 
 
+function operatorToData (email, password)
+    { 
+    toData.email = email;
+    toData.password = password;
+    console.log('Seen from function: ');
+    console.log(toData.email);
+    console.log(toData.password);
+    console.log();
+    console.log(toData);
+    console.log();
+    return {email, password};
+    }
 loginFormLnk.addEventListener('submit', smartSubmit);
+
+//console.log(operatorToData('first@gh', '1234'));
+
 console.log('Out from the listener just this: ', toData); //{email: '', password: ''}
