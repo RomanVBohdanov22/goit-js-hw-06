@@ -24,7 +24,7 @@
     Виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
 */
 
-const loginFormLnk = document.querySelector('.login-form');
+//const loginFormLnk = document.querySelector('.login-form');
 /*
 const mangoUser = {
   mangoEmail: '',
@@ -51,12 +51,11 @@ loginFormLnk.addEventListener('submit', mangoUser.mangoListener.bind(mangoUser))
 
 mangoUser.mangoReturnFields.bind(mangoUser);*/
 
+let toData = {email: "", password: ""};
+const loginFormLnk = document.querySelector('.login-form');
+// function smartSubmit(event)
 
-
-let toData = {};
-loginFormLnk.addEventListener('submit', smartSubmit);
-
-function smartSubmit(event) {
+const  smartSubmit = (event) => {
   event.preventDefault();
   const {
     elements: { email, password },
@@ -65,14 +64,17 @@ function smartSubmit(event) {
     return alert('Please fill in all the fields!');
   }
 
-  toData.Email = email.value;
-  toData.Password = password.value;
+  toData.email = email.value;
+  toData.password = password.value; 
 
   console.log(`Email: ${email.value}, Password: ${password.value}`);
-
-  console.log(toData.Email, toData.Password);
+  console.log(toData);
+  console.log(toData.email, toData.password); //це видно лише всередині каллбек - функції!
 
   event.currentTarget.reset();
 
-  //return alert({ ...toData }.Email, {...toData}.Password);
+  //return alert(toData.email + " " + toData.password);
 } 
+
+loginFormLnk.addEventListener('submit', smartSubmit);
+console.log('Out from the listener just this: ', toData); //{email: '', password: ''}
