@@ -51,7 +51,7 @@ loginFormLnk.addEventListener('submit', mangoUser.mangoListener.bind(mangoUser))
 
 mangoUser.mangoReturnFields.bind(mangoUser);*/
 
-let toData = {email: "", password: ""};
+let toData = {};//{email: "", password: ""};
 const loginFormLnk = document.querySelector('.login-form');
 
 const  smartSubmit = (event) => {
@@ -63,15 +63,18 @@ const  smartSubmit = (event) => {
     return alert('Please fill in all the fields!');
   }
 
-  toData.email = email.value;
-  toData.password = password.value; 
+  toData["email"] = email.value;
+  toData["password"] = password.value; 
+   
   console.log(`Email: ${email.value}, Password: ${password.value}`);
-  //console.log(toData);
-  //console.log(toData.email, toData.password); //це видно лише всередині каллбек - функції!
-  operatorToData(toData.email, toData.password);
+    console.log(toData);
+    //operatorToData(toData.email, toData.password);//лише для виведення на екран
+    
   event.currentTarget.reset(toData.email, toData.password);  
 } 
 
+loginFormLnk.addEventListener('submit', smartSubmit);
+/*
 function operatorToData (email, password)
     { 
     toData.email = email;
@@ -83,9 +86,7 @@ function operatorToData (email, password)
     console.log(toData);
     console.log();
     return {email, password};
-    }
-loginFormLnk.addEventListener('submit', smartSubmit);
-
-//console.log(operatorToData('first@gh', '1234'));
+}*/
+    
 
 console.log('Out from the listener just this: ', toData); //{email: '', password: ''}
