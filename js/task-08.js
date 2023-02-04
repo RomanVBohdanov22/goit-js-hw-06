@@ -66,7 +66,7 @@ const  smartSubmit = (event) => {
   toData["email"] = email.value;
   toData["password"] = password.value; 
    
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  console.log(`Email: ${toData.email}, Password: ${toData.password}`);
     console.log(toData);
     //operatorToData(toData.email, toData.password);//лише для виведення на екран
     
