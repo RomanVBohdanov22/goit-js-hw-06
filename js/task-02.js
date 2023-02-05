@@ -44,7 +44,3 @@ const proceedMarcup = ingredientsMas.map(ingredient => {
 const ingredients = document.querySelector('#ingredients');
 
 ingredients.append(...proceedMarcup);
-
-/*for (const item of ingredients) { 
-  console.log(item);
-}*/
