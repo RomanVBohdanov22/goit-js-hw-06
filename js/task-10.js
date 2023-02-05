@@ -51,7 +51,7 @@ function inputReaderBoxCreator() {
     let markupString = `<div style="width: ${tmpVal}px; height: ${tmpVal}px; 
     background-color: ${randomBackgroundColor}">
         </div>`;
-    console.log(`Number of boxes = ${el.toString()}`);
+    console.log(`<< Number of boxes = ${el.toString()}`);
     return (resultString += markupString);      
     }
     , ``);
