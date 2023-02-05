@@ -22,7 +22,7 @@ nameInputLnk.addEventListener('input', changeOutput);
 
 function changeOutput() { 
     
-    if (nameInputLnk.value === '') {
+    if (nameInputLnk.value.trim() === '') {
         nameOutputLnk.textContent = valueDefault;
         return;
     };

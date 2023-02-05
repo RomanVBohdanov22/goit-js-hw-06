@@ -32,23 +32,22 @@
 const inputLnk = document.querySelector('#validation-input');
 inputLnk.addEventListener('blur', checkOutput);
 
-const dataLength = inputLnk.getAttribute('data-length');
+const dataLength = Number(inputLnk.getAttribute('data-length'));
 console.log(dataLength);
 
 function checkOutput() { 
     let currentValue = inputLnk.value.trim();
     inputLnk.value = currentValue;
-    const operativeValue = [...currentValue].length;    
-    if (operativeValue != dataLength) {
-        //console.log(operativeValue, inputLnk.value);
-        //if (inputLnk.classList.contains("valid")) {}
-        inputLnk.classList.remove("valid");
-        inputLnk.classList.add("invalid");
+    const operativeValue = currentValue.length;    
+    if (operativeValue !== dataLength) {
+        toggleClasses("valid", "invalid");
+        return;
     }
-    //
-    else {
-        //if (inputLnk.classList.contains("invalid")) {}
-            inputLnk.classList.remove("invalid");
-            inputLnk.classList.add("valid");        
-    }
+        toggleClasses("invalid", "valid");    
+}
+
+function toggleClasses(offClass, onClass) { 
+    if (inputLnk.classList.contains(offClass))
+    { inputLnk.classList.remove(offClass); }
+    inputLnk.classList.add(onClass);
 }
