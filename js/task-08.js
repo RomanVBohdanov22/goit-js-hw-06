@@ -37,8 +37,8 @@ const  smartSubmit = (event) => {
     return alert('Please fill in all the fields!');
   }
 
-  toData["email"] = email.value;
-  toData["password"] = password.value;  
+  toData["email"] = email.value.trim();
+  toData["password"] = password.value.trim();  
      
     console.log(toData);
    
